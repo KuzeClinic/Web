@@ -1,0 +1,719 @@
+* {
+  font-family: "Kiwi maru", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+@keyframes slide {
+  0% {
+    left: 0%;
+  }
+  20% {
+    left: 0%;
+  }
+  25% {
+    left: -100%;
+  }
+  45% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  70% {
+    left: -200%;
+  }
+  75% {
+    left: -300%;
+  }
+  100% {
+    left: -300%;
+  }
+}
+hr {
+  margin: 3rem 5rem;
+}
+.top {
+  height: 100vh;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.slidercontainer {
+  height: 80%;
+  width: 75%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  border: 3px solid green;
+  display: grid;
+  place-items: center;
+  margin-left: 5%;
+}
+.slidercontainer h1 {
+  position: absolute;
+  z-index: 2;
+  font-size: 6rem;
+  font-family: "New Tegomin";
+  color: green;
+  text-shadow: 2px 2px 0 #fff;
+}
+.slidercontainer h1:nth-child(2) {
+  color: white;
+  filter: blur(6px);
+  z-index: 1;
+}
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400%;
+  height: 100%;
+  animation: slide 20s linear infinite;
+}
+.slide {
+  position: relative;
+  width: 25%;
+  height: 100%;
+  float: left;
+}
+.slide.s1 {
+  background: url(/pics/main1.jpg);
+  animation: animate 20s infinite;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.slide.s2 {
+  background: url(/pics/main2.jpg);
+  animation: animate 20s infinite;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.slide.s3 {
+  background: url(/pics/main3.jpg);
+  animation: animate 20s infinite;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.slide.s4 {
+  background: url(/pics/main4.jpg);
+  animation: animate 20s infinite;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@keyframes animate {
+  0% {
+    background-position: 40% 40%;
+  }
+  25% {
+    background-position: 50% 50%;
+  }
+  50% {
+    background-position: 60% 60%;
+  }
+  75% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 40% 40%;
+  }
+}
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 20%;
+  height: auto;
+}
+.nav ul {
+  list-style: none;
+}
+.nav li {
+  width: 100%;
+  border-bottom: 3px dotted green;
+}
+.nav li:last-child {
+  border-bottom: none;
+}
+.nav img {
+  height: 4rem;
+}
+.nav a {
+  text-decoration: none;
+  color: green;
+  font-size: 1.5rem;
+  background: transparent;
+  transition: all 0.3s;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  margin: 1rem 0;
+}
+.nav a:hover {
+  background: #f5f5f5;
+  transition: all 0.3s;
+}
+.checklist {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  background: #f5f5f5;
+  padding: 5rem 0;
+margin-top: 5rem;
+}
+.checklist h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.checklist img {
+  height: 200px;
+  margin-left: 3rem;
+}
+.checklistcontainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  margin: 0 3rem;
+}
+.checklistcontainer p {
+  font-size: 2rem;
+}
+.checklistcontainerleft,
+.checklistcontainerright {
+  text-align: left;
+  margin: 0 2rem;
+}
+.intro{
+  width: 100%;
+  margin-bottom: 5rem;
+}
+.intro h1{
+  font-size: 4rem;
+  color: green;
+  text-align: center;
+}
+.intro p{
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+.intro span{
+  color: green;
+}
+.fa-square-check {
+  color: green;
+}
+.announcements {
+  margin: 5rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.announcements h1 {
+  font-size: 3rem;
+  color: green;
+  margin-bottom: 3rem;
+  width: 100%;
+  text-align: center;
+}
+.announcements h1 a {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: white;
+  background: green;
+  border: 2px solid green;
+  border-radius: 5px;
+  padding: 0.2rem;
+  cursor: context-menu;
+  margin-left: 1rem;
+}
+.announcementscontainer {
+  background: #f5f5f5;
+  border-radius: 20px;
+  width: 70%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+  max-width: 1200px;
+}
+.announcementscontainer table {
+  border-collapse: collapse;
+  margin: 3rem;
+}
+.announcementscontainer th {
+  border-right: black dotted 3px;
+  font-size: 2rem;
+  padding-right: 3rem;
+}
+.announcementscontainer td {
+  padding-left: 3rem;
+}
+.announcementscontainer a {
+  color: black;
+  text-decoration: none;
+  font-size: 2rem;
+}
+.announcementscontainer a:hover {
+  border-bottom: 2px solid black;
+}
+.clinichours {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 5rem 0;
+}
+.clinichours h1 {
+  font-size: 3rem;
+  color: green;
+  margin-bottom: 3rem;
+  width: 100%;
+  text-align: center;
+}
+.clinichourscontainer {
+  background: #f5f5f5;
+  border-radius: 20px;
+  height: auto;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+}
+.clinichourscontainer table {
+  margin: 3rem;
+  border-collapse: collapse;
+  text-align: center;
+}
+.clinichourscontainer td,
+.clinichourscontainer th {
+  font-size: 2rem;
+  padding: 1rem;
+  border-bottom: 2px solid black;
+}
+.access {
+  margin: 5rem 0;
+}
+.accesscontainer {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  margin: auto;
+  border-radius: 20px;
+  width: 70%;
+  height: auto;
+  background: #f5f5f5;
+  padding: 2rem;
+  margin-top: 3rem;
+  max-width: 1200px;
+}
+.accesscontainer iframe {
+  display: flex;
+  margin: auto;
+  margin-right: 0;
+  width: 100%;
+}
+.accesscontainer div {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  margin: auto;
+}
+.accessright {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.accessright h1 {
+  color: green;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.accessright p {
+  background: green;
+  color: white;
+  border-radius: 50vw;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  text-align: center;
+}
+.access h1 {
+  font-size: 3rem;
+  color: green;
+  margin-bottom: 3rem;
+  width: 100%;
+  text-align: center;
+}
+.menu {
+  display: grid;
+  place-items: center;
+  margin: 5rem 0;
+}
+.menucontainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  justify-content: center;
+  border-radius: 20px;
+  position: absolute;
+  width: 75%;
+  bottom: 5%;
+  margin-left: 5%;
+}
+.menuitems:first-child {
+  background: #dc1414;
+  transition: all 0.3s;
+  border-left: green 3px solid;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.menuitems:last-child {
+  background: #ff8c00;
+  transition: all 0.3s;
+  border-right: green 3px solid;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.menuitems svg {
+  height: 8rem;
+  fill: #fff;
+  transition: all 0.3s;
+}
+.menu h1 {
+  font-size: 3rem;
+  color: green;
+  margin-bottom: 3rem;
+  text-decoration: underline;
+}
+.menuitems {
+  text-align: center;
+  text-decoration: none;
+  height: 220px;
+  width: 220px;
+  font-size: 1.5rem;
+  color: #fff;
+  border-top: green solid 3px;
+  border-bottom: green solid 3px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: dodgerblue;
+  transition: all 0.3s;
+}
+.menuitems:hover {
+  filter: brightness(0.7);
+  transition: all 0.3s;
+}
+.bottom {
+  padding: 3rem;
+  width: 100%;
+  height: 100%;
+  background: green;
+}
+.bottomcontainer {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr;
+  place-items: center;
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+.bottomright ul {
+  list-style: none;
+}
+.bottomright p {
+  color: white;
+  font-size: 1.5rem;
+}
+.bottomright a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+}
+.bottomright a:hover {
+  text-decoration: underline;
+}
+.bottommiddle table {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-collapse: collapse;
+}
+.bottommiddle td,
+.bottommiddle th {
+  padding: 0.5rem;
+  border-bottom: 2px solid white;
+  font-size: 1.5rem;
+  color: white;
+}
+.bottomleft h1 {
+  color: white;
+  font-size: 3rem;
+  font-family: "New Tegomin";
+}
+.bottomleft p {
+  color: white;
+  font-size: 2rem;
+}
+.bottommenu {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.bottommenu p {
+  font-size: 1rem;
+  text-align: center;
+  border: 2px solid white;
+  margin: 0.5rem;
+  margin-top: 1rem;
+}
+.overlay.activated {
+  background: #000;
+  height: 100%;
+  width: 100%;
+  z-index: 49;
+  position: fixed;
+  opacity: 0.8;
+  display: none;
+  transition: all 0.3s;
+}
+@media screen and (max-width: 1100px) {
+  .slidercontainer h1 {
+    font-size: 4rem;
+  }
+  .nav img {
+    height: 3rem;
+  }
+  .nav a {
+    font-size: 1rem;
+  }
+  .menuitems svg {
+    height: 6rem;
+  }
+  .menuitems {
+    height: 180px;
+    width: 180px;
+  }
+  .intro h1{
+    font-size: 2rem;
+  }
+  .intro p{
+    font-size: 1rem;
+  }
+  .announcementscontainer {
+    width: 80%;
+  }
+  .accesscontainer {
+    grid-template-columns: 1fr;
+    width: 80%;
+  }
+  .accessright h1 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .clinichourscontainer {
+    width: 80%;
+  }
+  .clinichourscontainer td,
+  .clinichourscontainer th {
+    font-size: 1.5rem;
+    padding: 0.75rem;
+  }
+  .announcementscontainer th {
+    font-size: 1.25rem;
+  }
+  .announcementscontainer a {
+    font-size: 1.25rem;
+  }
+  .checklistcontainer {
+    flex-direction: column;
+  }
+  .accessright h1 {
+    font-size: 1.5rem;
+  }
+  .accessright p {
+    font-size: 1rem;
+  }
+  .bottomcontainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 90%;
+    place-content: center;
+  }
+  .bottommiddle td,
+  .bottommiddle th {
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+  .bottommiddle table {
+    margin: 3rem 0;
+  }
+  .bottomright ul {
+    display: flex;
+  }
+  .bottomright li {
+    margin: 0.2rem;
+  }
+  .bottomright a {
+    font-size: 0.8rem;
+  }
+  .bottomright P {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .slidercontainer {
+    width: 100%;
+    margin-right: 5%;
+  }
+  .checklist{
+    padding: 1rem;
+  }
+  .checklist h1{
+    font-size: 1.5rem;
+  }
+  .nav {
+    position: fixed;
+    background: white;
+    width: 100%;
+    z-index: 50;
+    top: -900px;
+    transition: all 0.3s;
+  }
+  .nav li {
+    width: 80vw;
+  }
+  .nav.active {
+    top: 0;
+    transition: all 0.3s;
+  }
+  .menucontainer {
+    width: 100%;
+  }
+  .menuitems{
+    font-size: 1rem;
+  }
+  .intro{
+    margin-bottom: 2rem;
+  }
+  .slidercontainer h1 {
+    writing-mode: vertical-rl;
+    font-size: 2rem;
+  }
+  .menucontainer {
+    margin: auto;
+  }
+  .menuitems svg {
+    height: 4rem;
+  }
+  .menuitems {
+    height: 140px;
+    width: 140px;
+  }
+  .announcements h1 {
+    font-size: 2rem;
+  }
+  .announcements h1 a{
+    font-size: 1rem;
+  }
+  .announcementscontainer {
+    width: 90%;
+    margin-bottom: 1rem;
+  }
+  .announcementscontainer th {
+    padding-right: 1rem;
+    font-size: 1rem;
+  }
+  .announcementscontainer td {
+    padding-left: 0.8rem;
+  }
+  .announcementscontainer a {
+    font-size: 0.8rem;
+  }
+  .announcementscontainer table{
+    margin: 1rem;
+  }
+  .clinichours h1 {
+    font-size: 2rem;
+  }
+  .clinichourscontainer {
+    width: 90%;
+  }
+  .clinichourscontainer td,
+  .clinichourscontainer th {
+    font-size: 0.8rem;
+    padding: 0.3rem;
+  }
+  .access h1{
+    font-size: 2rem;
+  }
+  .accesscontainer {
+    width: 90%;
+  }
+  .accessright h1 {
+    font-size: 1.5rem;
+  }
+  .accessright p {
+    font-size: 0.8rem;
+  }
+  .bottommiddle td,
+  .bottommiddle th {
+    padding: 0.2rem;
+    font-size: 0.8rem;
+  }
+  .bottomleft h1 {
+    font-size: 1.5rem;
+  }
+  .bottomleft p {
+    font-size: 1rem;
+  }
+  .bottomright ul {
+    flex-direction: column;
+  }
+  .checklistcontainer p {
+    font-size: 1.2rem;
+  }
+  .checklistcontainer{
+    margin: 0 1rem;
+  }
+  .accesscontainer iframe {
+height: 200px;
+  }
+  .toggle .bar {
+    background: green;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    display: block;
+    transition: all 0.3s;
+  }
+  #mobile {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    transform: translate(5%, 20%);
+    z-index: 52;
+    transition: all 0.3s;
+  }
+  #mobile.activated .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  #mobile.activated .bar:nth-child(2) {
+    opacity: 0;
+  }
+  #mobile.activated .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .overlay.activated {
+    display: inherit;
+  }
+}
