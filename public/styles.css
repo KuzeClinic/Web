@@ -69,19 +69,19 @@ to{
 }
 @keyframes imageswitch {
   0% {
-    background-image: url(https://github.com/KuzeClinic/Web/blob/main/pics/main1.jpg);
+    background-image: url(https://raw.githubusercontent.com/KuzeClinic/Web/main/pics/main1.jpg);
   }
   25% {
-    background-image: url(https://github.com/KuzeClinic/Web/blob/main/pics/main2.jpg);
+    background-image: url(https://raw.githubusercontent.com/KuzeClinic/Web/main/pics/main2.jpg);
   }
   50% {
-    background-image: url(https://github.com/KuzeClinic/Web/blob/main/pics/main3.jpg);
+    background-image: url(https://raw.githubusercontent.com/KuzeClinic/Web/main/pics/main3.jpg);
   }
   75% {
-    background-image: url(https://github.com/KuzeClinic/Web/blob/main/pics/main4.jpg);
+    background-image: url(https://raw.githubusercontent.com/KuzeClinic/Web/main/pics/main4.jpg);
   }
   100% {
-    background-image: url(https://github.com/KuzeClinic/Web/blob/main/pics/main5.jpg);
+    background-image: url(https://raw.githubusercontent.com/KuzeClinic/Web/main/pics/main5.jpg);
   }
 }
 hr {
